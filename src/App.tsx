@@ -1,11 +1,26 @@
-import { useState } from 'react'
+import React from "react";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import routes from "./routes/Routes";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App: React.FC = () => {
   return (
-    <>123</>
-  )
-}
+    <Router>
+      <Routes>
+        {routes.map((route, index) => (
+          <Route key={index} path={route.path} element={route.element}>
+            {route.children?.map((child, childIndex) => (
+              <Route
+                key={childIndex}
+                index={child.index}
+                path={child.path}
+                element={child.element}
+              />
+            ))}
+          </Route>
+        ))}
+      </Routes>
+    </Router>
+  );
+};
 
-export default App
+export default App;

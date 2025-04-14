@@ -1,0 +1,316 @@
+.home-page {
+  margin-top: 125px;
+  background-color: #f9fafa;
+  display: flex;
+  position: relative;
+  .home-bg {
+    height: calc(100vh - 125px);
+    width: 50%;
+    background-color: #bcaaa4;
+  }
+  .home-card {
+    background-color: #f9fafa;
+    position: absolute;
+    left: 50%;
+    width: 800px;
+    max-width: 100%;
+    height: 500px;
+    top: 50%; // 垂直置中
+    transform: translate(-50%, -50%); // 修正偏移，確保完全置中
+    display: flex;
+    border-radius: 10px; // 增加圓角
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease; // 增加過渡效果
+    box-shadow:
+      0 8px 16px rgba(0, 0, 0, 0.3),
+      0 12px 24px rgba(0, 0, 0, 0.22); // 增強陰影效果
+
+    .home-card-left {
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 400px;
+      min-width: 400px;
+      background-color: #efebe9;
+      height: 100%;
+    }
+    .home-card-photo {
+      background-image: url("@/assets/home-user.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: 40% center;
+      width: 100%;
+      height: 100%;
+    }
+    .home-card-name {
+      display: block;
+      margin: 20px 0 10px 0;
+      width: 100%;
+      font-size: 26px;
+      font-weight: 800;
+      text-align: center;
+    }
+    .home-card-profession {
+      letter-spacing: 3px;
+    }
+    .home-card-right {
+      padding: 30px;
+    }
+    .home-card-title {
+      font-size: 60px;
+      font-weight: 800;
+      margin: 50px 0 10px 0;
+      line-height: 1.3;
+    }
+    .home-card-sub {
+      font-size: 20px;
+      font-weight: 800;
+    }
+    .home-card-content {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+  }
+}
+.about-page {
+  margin-top: 125px;
+  background: linear-gradient(135deg, #f5f7fa);
+  background-color: #efebe9;
+  min-height: calc(100vh - 125px);
+  .about-banner {
+    position: relative;
+    background-image: url("@/assets/about.jpg");
+    background-position: center 60%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 400px;
+  }
+  .about-banner-mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.4;
+    z-index: 1;
+  }
+  .about-banner-main-label {
+    position: absolute;
+    color: #fff;
+    z-index: 2;
+    font-size: 45px;
+    top: 100px;
+    left: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); // 增加文字陰影
+    font-weight: bold; // 加粗文字
+    letter-spacing: 1px; // 增加字距
+  }
+  .about-banner-sub-label {
+    position: absolute;
+    color: #fff;
+    z-index: 2;
+    font-size: 24px;
+    top: 160px;
+    left: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+  }
+  .about-content {
+    box-sizing: border-box;
+    padding: 30px 50px;
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .about-introduce-title {
+    text-align: center;
+    font-size: 50px;
+    margin: 50px 0 30px 0;
+    font-weight: 800;
+  }
+  .about-introduce-content {
+    font-size: 18px;
+  }
+  .about-item-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    .about-item-image {
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      width: 400px;
+      height: 600px;
+      margin: 50px 0;
+      &.run {
+        background-image: url("@/assets/run.jpg");
+      }
+      &.climb-mountain {
+        background-image: url("@/assets/climb-mountain.jpg");
+      }
+      &.bike {
+        background-image: url("@/assets/bike.jpg");
+      }
+      &.yoga {
+        background-image: url("@/assets/yoga.jpg");
+      }
+      &.hyrox {
+        background-image: url("@/assets/hyrox.jpg");
+      }
+    }
+    .about-item-wrap {
+      width: calc(100% - 400px);
+      padding: 40px;
+      box-sizing: border-box;
+      .about-item-title {
+        font-size: 40px;
+        font-weight: 800;
+      }
+      .about-item-content {
+        margin-top: 20px;
+        font-size: 18px;
+        text-align: left;
+      }
+    }
+  }
+  .about-conclusion-title {
+    font-size: 40px;
+    font-weight: 800;
+  }
+  .about-conclusion-content {
+    text-align: l;
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.2;
+  }
+  .about-conclusion-image {
+    margin-top: 20px;
+    position: relative;
+    background-image: url("@/assets/mountain2.jpg");
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 700px;
+    background-attachment: fixed;
+  }
+}
+
+.projects-page {
+  margin-top: 125px;
+  padding: 40px;
+  background: #f9f9f9; // 背景顏色
+  color: #333; // 文字顏色
+
+  .projects-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // 自適應網格
+    gap: 2rem; // 卡片間距
+  }
+
+  .project-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px); // 卡片浮起效果
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover; // 圖片裁切
+    }
+
+    .project-info {
+      padding: 1rem;
+
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: #2c3e50;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #7f8c8d;
+      }
+    }
+  }
+}
+
+.contact-page {
+  margin-top: 125px;
+  padding: 2rem;
+  background: #f9f9f9; // 背景顏色
+  color: #333; // 文字顏色
+
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    .form-group {
+      margin-bottom: 1.5rem;
+
+      label {
+        display: block;
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        color: #2c3e50;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 0.8rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        transition: border-color 0.3s ease;
+
+        &:focus {
+          border-color: #3498db; // 聚焦時的邊框顏色
+        }
+      }
+
+      textarea {
+        resize: vertical; // 僅允許垂直調整大小
+        min-height: 100px;
+      }
+    }
+
+    .submit-button {
+      display: block;
+      width: 100%;
+      padding: 0.8rem;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #fff;
+      background: #3498db;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: #2980b9; // 滑鼠懸停時的背景顏色
+      }
+    }
+  }
+}
