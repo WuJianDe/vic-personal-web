@@ -1,4 +1,5 @@
 import React from "react";
+import "./i18n"; // 確保載入 i18n 初始化檔案
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import routes from "./routes/Routes";
 

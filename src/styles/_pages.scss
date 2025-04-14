@@ -285,7 +285,7 @@
         transition: border-color 0.3s ease;
 
         &:focus {
-          border-color: #3498db; // 聚焦時的邊框顏色
+          border-color: #938079; // 聚焦時的邊框顏色
         }
       }
 
@@ -302,14 +302,14 @@
       font-size: 1rem;
       font-weight: bold;
       color: #fff;
-      background: #3498db;
+      background: #bcaaa4;
       border: none;
       border-radius: 5px;
       cursor: pointer;
       transition: background 0.3s ease;
 
       &:hover {
-        background: #2980b9; // 滑鼠懸停時的背景顏色
+        background: #938079; // 滑鼠懸停時的背景顏色
       }
     }
   }

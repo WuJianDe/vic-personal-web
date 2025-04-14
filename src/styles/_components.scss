@@ -64,3 +64,44 @@ header {
     }
   }
 }
+
+.language-button {
+  padding: 8px 12px;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+
+  &.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+
+  &:hover {
+    background-color: #e0e0e0;
+  }
+}
+
+.language-dropdown {
+  .language-select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: border-color 0.3s;
+    text-align: center;
+    &:hover {
+      border-color: #007bff;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: #007bff;
+    }
+  }
+}
