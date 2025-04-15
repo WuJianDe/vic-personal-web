@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, useLocation, Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const Header: React.FC = () => {
@@ -10,9 +10,9 @@ const Header: React.FC = () => {
     { to: "/contact", label: t("header-contact") }
   ];
   return (
-    <header>
-      <div className="header-social-media">
-        <div className="header-social-media-title">{t("header-title")}</div>
+    <header className={`${i18n.language}`}>
+      <div className={`header-social-media`}>
+        <div className="header-social-media-title"></div>
         <div className="language-dropdown">
           <select
             value={i18n.language}
@@ -26,7 +26,7 @@ const Header: React.FC = () => {
       </div>
       <div className="header-nav">
         <Link to="/" className="header-title">
-          Vic Wu
+          VIC WU
         </Link>
         <div className="header-nav-menu">
           {links.map((item, index) => (

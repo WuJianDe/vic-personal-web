@@ -1,8 +1,8 @@
 import { Trans, useTranslation } from "react-i18next";
 const HomePage: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   return (
-    <div className="home-page">
+    <div className={`home-page ${i18n.language}`}>
       <div className="home-bg"></div>
       <div className="home-card">
         <div className="home-card-left">
