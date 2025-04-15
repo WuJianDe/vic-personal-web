@@ -1,4 +1,6 @@
+import { Trans, useTranslation } from "react-i18next";
 const ContactPage: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <div className="contact-page">
       <form
@@ -7,33 +9,33 @@ const ContactPage: React.FC = () => {
         method="post"
       >
         <div className="form-group">
-          <label htmlFor="name">Name</label>
+          <label htmlFor="name">{t("contact-name")}</label>
           <input
             type="text"
             id="name"
             name="name"
-            placeholder="Enter your name"
+            placeholder={t("contact-name-placeholder")}
           />
         </div>
         <div className="form-group">
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email">{t("contact-email")}</label>
           <input
             type="email"
             id="email"
             name="email"
-            placeholder="Enter your email"
+            placeholder={t("contact-email-placeholder")}
           />
         </div>
         <div className="form-group">
-          <label htmlFor="message">Message</label>
+          <label htmlFor="message">{t("contact-message")}</label>
           <textarea
             id="message"
             name="message"
-            placeholder="Enter your message"
+            placeholder={t("contact-message-placeholder")}
           ></textarea>
         </div>
         <button type="submit" className="submit-button">
-          Submit
+          {t("contact-submit")}
         </button>
       </form>
     </div>
