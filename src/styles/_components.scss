@@ -17,8 +17,12 @@ header {
     align-items: center;
     justify-content: space-between; // 左右分佈
     padding: 0 8vw;
+    @media (max-width: 750px) {
+      height: 30px;
+      padding: 0 4vw;
+    }
     .header-social-media-title {
-      letter-spacing: 3px;
+      letter-spacing: 2px;
       color: #e0e0e0;
     }
   }
@@ -30,13 +34,18 @@ header {
     align-items: center;
     justify-content: space-between; // 左右分佈
     padding: 0 8vw;
-    font-family: playfairdisplay-bold, "playfair display", serif;
-
+    @media (max-width: 750px) {
+      padding: 0 4vw;
+      height: 60px;
+    }
     .header-title {
       font-size: 24px;
       color: #000;
       font-weight: 800;
       letter-spacing: 1px;
+      @media (max-width: 750px) {
+        font-size: 20px;
+      }
       &:hover {
         color: #8d6e63;
       }
@@ -54,6 +63,10 @@ header {
       transition:
         background-color 0.3s ease,
         transform 0.2s ease;
+      @media (max-width: 750px) {
+        font-size: 14px;
+        padding: 0px 6px;
+      }
       &:hover {
         color: #8d6e63;
         transform: scale(1.4); // 輕微放大效果
@@ -65,36 +78,21 @@ header {
   }
 }
 
-.language-button {
-  padding: 8px 12px;
-  margin: 0 5px;
-  border: 1px solid #ccc;
-  background-color: #f9f9f9;
-  cursor: pointer;
-  transition:
-    background-color 0.3s,
-    color 0.3s;
-
-  &.active {
-    background-color: #007bff;
-    color: white;
-    border-color: #007bff;
-  }
-
-  &:hover {
-    background-color: #e0e0e0;
-  }
-}
-
 .language-dropdown {
   .language-select {
+    color: #fff;
     padding: 8px;
-    border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: #f9f9f9;
     cursor: pointer;
-    transition: border-color 0.3s;
     text-align: center;
+    @media (max-width: 750px) {
+      padding: 4px 6px;
+      font-size: 12px;
+    }
+    option {
+      color: #000;
+      font-size: 12px;
+    }
     &:hover {
       border-color: #007bff;
     }

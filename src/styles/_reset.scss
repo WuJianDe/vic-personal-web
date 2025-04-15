@@ -8,7 +8,8 @@
 }
 
 /* 2. 重置列表樣式 */
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
@@ -56,12 +57,24 @@ textarea {
 }
 
 /* 8. 重置文字的縮排 */
-p, blockquote, ul, ol, dl, dd, figure, pre {
+p,
+blockquote,
+ul,
+ol,
+dl,
+dd,
+figure,
+pre {
   margin-bottom: 1em;
 }
 
 /* 9. 重置 `h1` 至 `h6` 的標題樣式 */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: normal;
   margin: 0;
   padding: 0;
@@ -73,8 +86,11 @@ p {
 }
 
 /* 11. 讓所有元素的 line-height 一致 */
-html, body {
+html,
+body {
   line-height: 1.5;
+  font-family: playfairdisplay-bold, "Playfair Display", "Noto Serif TC", serif !important;
+  // font-family: "BBC Reith Serif", BBCReithSerif-fallback, serif;
 }
 
 /* 12. 重置表單元素的邊框、背景與行為 */
@@ -107,6 +123,15 @@ body {
 }
 
 /* 15. 用統一的樣式處理表格、標題等 */
-article, aside, details, figcaption, figure, footer, header, main, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
   display: block;
 }
