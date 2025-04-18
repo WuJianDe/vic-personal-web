@@ -7,7 +7,7 @@ const Header: React.FC = () => {
   const links = [
     { to: "/about", label: t("header-about") },
     { to: "/projects", label: t("header-projects") },
-    { to: "/contact", label: t("header-contact") }
+    { to: "/contact", label: t("header-contact") },
   ];
   return (
     <header className={`${i18n.language}`}>
@@ -28,7 +28,7 @@ const Header: React.FC = () => {
         <Link to="/" className="header-title">
           VIC WU
         </Link>
-        <div className="header-nav-menu">
+        <nav className="header-nav-menu">
           {links.map((item, index) => (
             <NavLink
               key={index}
@@ -41,7 +41,7 @@ const Header: React.FC = () => {
               {item.label}
             </NavLink>
           ))}
-        </div>
+        </nav>
       </div>
     </header>
   );

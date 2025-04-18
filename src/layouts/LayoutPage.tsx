@@ -5,9 +5,9 @@ const LayoutPage: React.FC = () => {
   return (
     <>
       <Header />
-      <div>
+      <main>
         <Outlet />
-      </div>
+      </main>
     </>
   );
 };

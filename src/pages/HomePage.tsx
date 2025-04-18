@@ -1,6 +1,6 @@
 import { Trans, useTranslation } from "react-i18next";
 const HomePage: React.FC = () => {
-  const { t, i18n } = useTranslation();
+  const {  i18n } = useTranslation();
   return (
     <div className={`home-page ${i18n.language}`}>
       <div className="home-bg"></div>
@@ -8,17 +8,17 @@ const HomePage: React.FC = () => {
         <div className="home-card-left">
           <div className="home-card-photo"></div>
         </div>
-        <div className="home-card-right">
-          <div className="home-card-title">
+        <section className="home-card-right">
+          <h1 className="home-card-title">
             <Trans i18nKey="home-title" />
-          </div>
-          <div className="home-card-sub">
+          </h1>
+          <article className="home-card-sub">
             <Trans i18nKey="home-card-sub" />
-          </div>
-          <div className="home-card-content">
+          </article>
+          <article className="home-card-content">
             <Trans i18nKey="home-card-content" />
-          </div>
-        </div>
+          </article>
+        </section>
       </div>
     </div>
   );
