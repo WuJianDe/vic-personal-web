@@ -21,10 +21,13 @@
     }
     @media (max-width: 750px) {
       .home-card-title {
-        font-size: 2.5rem !important;
+        font-size: 30px !important;
       }
       .home-card-sub {
-        font-size: 1.2rem !important;
+        font-size: 14px !important;
+      }
+      .home-card-content {
+        font-size: 10px !important;
       }
     }
   }
@@ -37,7 +40,7 @@
     background-color: #f9fafa;
     position: absolute;
     left: 50%;
-    width: 800px;
+    width: 855px;
     max-width: 100%;
     height: 500px;
     top: 50%; // 垂直置中
@@ -134,6 +137,58 @@
   background: linear-gradient(135deg, #f5f7fa);
   background-color: #efebe9;
   min-height: calc(100vh - 125px);
+  &.zh {
+    .about-banner-main-label {
+      font-weight: 400 !important;
+      letter-spacing: 1px;
+    }
+    .about-banner-sub-label {
+      top: 170px !important;
+      letter-spacing: 1px;
+    }
+    .about-introduce-title {
+      font-weight: 400 !important;
+      font-size: 32px !important;
+      letter-spacing: 1px;
+      margin-top: 30px;
+    }
+    .about-introduce-content {
+      font-weight: 400 !important;
+      font-size: 14px !important;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+    .about-item-title {
+      font-weight: 400 !important;
+      font-size: 30px !important;
+      letter-spacing: 1px;
+    }
+    .about-item-content {
+      font-weight: 400 !important;
+      font-size: 14px !important;
+      letter-spacing: 1px;
+    }
+    .about-conclusion-title {
+      font-weight: 400 !important;
+      font-size: 30px !important;
+      letter-spacing: 1px;
+      margin: 10px 0;
+      padding-top: 30px;
+      border-top: #c7c7c7b6 1px solid;
+      @media (max-width: 600px) {
+        margin: 30px 0;
+      }
+    }
+    .about-conclusion-content {
+      font-weight: 400 !important;
+      font-size: 14px !important;
+      letter-spacing: 1px;
+      padding-bottom: 20px;
+    }
+  }
+  @media (max-width: 750px) {
+    margin-top: 85px;
+  }
   .about-banner {
     position: relative;
     background-image: url("@/assets/about.jpg");
@@ -162,6 +217,12 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); // 增加文字陰影
     font-weight: bold; // 加粗文字
     letter-spacing: 1px; // 增加字距
+    @media (max-width: 770px) {
+      font-size: 40px;
+    }
+    @media (max-width: 410px) {
+      left: 20px;
+    }
   }
   .about-banner-sub-label {
     position: absolute;
@@ -172,33 +233,78 @@
     left: 40px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     letter-spacing: 1px;
+    @media (max-width: 770px) {
+      font-size: 20px;
+    }
+    @media (max-width: 690px) {
+      top: 220px;
+    }
+    @media (max-width: 410px) {
+      left: 20px;
+    }
   }
   .about-content {
     box-sizing: border-box;
-    padding: 30px 50px;
+    padding: 20px 40px;
     text-align: center;
     max-width: 1000px;
     margin: 0 auto;
+    @media (max-width: 790px) {
+      padding: 20px 20px;
+    }
+    @media (max-width: 650px) {
+      padding: 10px;
+    }
+    @media (max-width: 650px) {
+      padding: 0;
+    }
   }
   .about-introduce-title {
     text-align: center;
     font-size: 50px;
-    margin: 50px 0 30px 0;
+    margin: 30px 0;
     font-weight: 800;
+    @media (max-width: 600px) {
+      font-size: 40px;
+      margin: 15px 0;
+    }
+    @media (max-width: 650px) {
+      margin: 10px 0;
+      font-size: 40px;
+    }
   }
   .about-introduce-content {
     font-size: 18px;
+    @media (max-width: 690px) {
+      font-size: 15px;
+    }
   }
   .about-item-box {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
     .about-item-image {
       background-repeat: no-repeat;
       background-size: auto 100%;
       width: 400px;
       height: 580px;
       margin: 50px 0;
+      @media (max-width: 790px) {
+        width: 300px;
+        height: 440px;
+        margin: 30px 0;
+      }
+      @media (max-width: 600px) {
+        width: 100%;
+        padding: 30px 20px;
+        background-size: 100% auto;
+        background-position: center 60%;
+        background-attachment: fixed;
+        filter: brightness(0.8);
+      }
       &.run {
         background-image: url("@/assets/run.jpg");
       }
@@ -219,26 +325,53 @@
       width: calc(100% - 400px);
       padding: 40px;
       box-sizing: border-box;
+      @media (max-width: 910px) {
+        padding: 40px 26px;
+      }
+      @media (max-width: 790px) {
+        width: calc(100% - 300px);
+        padding: 30px 20px;
+      }
+      @media (max-width: 600px) {
+        width: 100%;
+        padding: 0px 20px;
+      }
       .about-item-title {
         font-size: 36px;
         font-weight: 800;
+        @media (max-width: 910px) {
+          font-size: 26px;
+        }
+        @media (max-width: 790px) {
+          font-size: 24px;
+        }
       }
       .about-item-content {
         margin-top: 20px;
         font-size: 18px;
         text-align: left;
+        @media (max-width: 910px) {
+          font-size: 16px;
+        }
       }
     }
   }
   .about-conclusion-title {
     font-size: 40px;
     font-weight: 800;
+    @media (max-width: 600px) {
+      margin-top: 20px;
+      font-size: 36px;
+    }
   }
   .about-conclusion-content {
     text-align: l;
     margin-top: 20px;
     font-size: 18px;
     line-height: 1.2;
+    @media (max-width: 600px) {
+      font-size: 16px;
+    }
   }
   .about-conclusion-image {
     margin-top: 20px;

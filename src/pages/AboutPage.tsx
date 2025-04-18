@@ -1,8 +1,8 @@
 import { Trans, useTranslation } from "react-i18next";
 const AboutMePage: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   return (
-    <div className="about-page">
+    <div className={`about-page ${i18n.language}`}>
       <div className="about-banner">
         <div className="about-banner-mask"></div>
         <div className="about-banner-main-label">
@@ -31,6 +31,7 @@ const AboutMePage: React.FC = () => {
           </div>
         </div>
         <div className="about-item-box">
+          <div className="about-item-image hyrox"></div>
           <div className="about-item-wrap">
             <div className="about-item-title">
               <Trans i18nKey="about-hyrox-title" />
@@ -39,7 +40,6 @@ const AboutMePage: React.FC = () => {
               <Trans i18nKey="about-hyrox-content" />
             </div>
           </div>
-          <div className="about-item-image hyrox"></div>
         </div>
         <div className="about-item-box">
           <div className="about-item-image run"></div>
@@ -54,6 +54,7 @@ const AboutMePage: React.FC = () => {
         </div>
 
         <div className="about-item-box">
+          <div className="about-item-image climb-mountain"></div>
           <div className="about-item-wrap">
             <div className="about-item-title">
               <Trans i18nKey="about-climb-title" />
@@ -62,7 +63,6 @@ const AboutMePage: React.FC = () => {
               <Trans i18nKey="about-climb-content" />
             </div>
           </div>
-          <div className="about-item-image climb-mountain"></div>
         </div>
         <div className="about-item-box">
           <div className="about-item-image bike"></div>
