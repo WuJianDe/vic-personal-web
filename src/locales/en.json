@@ -28,5 +28,9 @@
   "contact-email-placeholder": "Enter your email",
   "contact-message": "Message",
   "contact-message-placeholder": "Enter your message",
-  "contact-submit": "Submit"
+  "contact-submit": "Submit",
+  "projects-todo-list-title":"To Do List",
+  "projects-todo-list-content":"A React + Vite to-do app with filtering, localStorage persistence, timestamping, a modern SCSS UI, and Zustand state management.",
+  "projects-react-learning-title":"React Learning",
+  "projects-react-learning-content":"As I've been learning React, I've been putting my knowledge into practice through small, learn-by-doing projects. This approach has not only deepened my understanding of React but has also allowed me to accumulate valuable hands-on experience."
 }

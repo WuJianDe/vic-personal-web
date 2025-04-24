@@ -1,19 +1,20 @@
+import { useTranslation } from "react-i18next";
+import todoglist from "@/assets/todolist.png";
+import reactLearning from "@/assets/react-learning.png";
 const ProjectsPage: React.FC = () => {
+  const { t } = useTranslation();
   const projects = [
     {
-      title: "作品一",
-      description: "這是一個展示技術與創意的專案。",
-      image: "/path/to/project1.jpg",
+      title: t("projects-todo-list-title"),
+      description: t("projects-todo-list-content"),
+      image: todoglist,
+      url: "https://wujiande.github.io/to-do-list",
     },
     {
-      title: "作品二",
-      description: "這是一個專注於使用者體驗的專案。",
-      image: "/path/to/project2.jpg",
-    },
-    {
-      title: "作品三",
-      description: "這是一個結合設計與功能的專案。",
-      image: "/path/to/project3.jpg",
+      title: t("projects-react-learning-title"),
+      description: t("projects-react-learning-content"),
+      image: reactLearning,
+      url: "https://wujiande.github.io/react-challenge/#/counter",
     },
   ];
 
@@ -21,13 +22,24 @@ const ProjectsPage: React.FC = () => {
     <div className="projects-page">
       <div className="projects-list">
         {projects.map((project, index) => (
-          <div className="project-card" key={index}>
-            <img src={project.image} alt={project.title} className="project-image" />
+          <a
+            className="project-card"
+            key={index}
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <img
+              src={project.image}
+              alt={project.title}
+              className="project-image"
+            />
             <div className="project-info">
               <h2>{project.title}</h2>
               <p>{project.description}</p>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </div>

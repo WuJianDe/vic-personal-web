@@ -28,5 +28,9 @@
   "contact-email-placeholder": "請輸入電子信箱",
   "contact-message": "訊息",
   "contact-message-placeholder": "請輸入訊息",
-  "contact-submit": "送出"
+  "contact-submit": "送出",
+  "projects-todo-list-title": "待辦事項列表",
+  "projects-todo-list-content": "用 React 製作的任務管理小工具，可新增、編輯、刪除，具備篩選、本地儲存、時間戳記、現代化 SCSS 介面和 Zustand 狀態管理。",
+  "projects-react-learning-title": "React 學習",
+  "projects-react-learning-content": "​在學習 React 的過程中，我透過邊學邊做的小型專案來實踐所學知識，這不僅加深了我對 React 的理解，也讓我在實作中累積了寶貴的經驗。"
 }

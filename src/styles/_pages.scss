@@ -386,29 +386,30 @@
 }
 
 .projects-page {
-  margin-top: 125px;
-  padding: 40px;
+  margin: 0 8vw;
+  margin-top: 165px;
   background: #f9f9f9; // 背景顏色
   color: #333; // 文字顏色
 
   .projects-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // 自適應網格
-    gap: 2rem; // 卡片間距
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: flex-start;
   }
 
   .project-card {
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
     overflow: hidden;
     transition:
       transform 0.3s ease,
       box-shadow 0.3s ease;
-
+    max-width: 400px;
     &:hover {
       transform: translateY(-5px); // 卡片浮起效果
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.22), 0 3px 8px rgba(0,0,0,0.18);
     }
 
     .project-image {
@@ -429,6 +430,11 @@
       p {
         font-size: 1rem;
         color: #7f8c8d;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
     }
   }
@@ -446,7 +452,7 @@
     background: #fff;
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.16), 0 1.5px 4px rgba(0,0,0,0.12);
 
     .form-group {
       margin-bottom: 1.5rem;
